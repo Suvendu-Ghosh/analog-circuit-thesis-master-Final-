@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Maxwell</title>
+  <script src="util.js" type="text/javascript"></script>
+  <script src="linearsystem.js" type="text/javascript"></script>
+  <script src="circ.js" type="text/javascript"></script>
+  <style type="text/css"><!--
+    body {
+      background-color: #eee; padding: 3px; margin: 0; overflow: hidden;
+    }
+    canvas { background-color: #fff; border: 1px outset #aaa }
+    p { margin: 0; padding: 3px }
+    div#about {
+      float: center; text-align: center; font-weight: bold;}
+    div#leadoutput {
+      background-color: #a00; color: #fff; font-weight: bold; padding: 3px;
+      position: absolute; top: 10px; width: 190px; text-align: right
+    }
+    canvas.clickable {
+      cursor: hand;
+      cursor: pointer;
+    }
+    .hiddenlink {
+      display: none;
+    }
+  --></style>
+</head>
+<body onload="init();" onresize="sizeCanvas();" onkeydown="return kdown(event);"
+      onselectstart="return selectstart(event);">
+
+
+
+<div id="leadoutput"><em>v</em><sub>+</sub> = ?? (floating)</div>
+
+<canvas id="circarea" width="800" height="400"
+	onmousedown="md(event);" onmouseup="mu(event);" onmousemove="mm(event);"
+	onmouseover="mover(event);" onmouseout="mout(event);">
+  <p>Your web browser may not be capable of running Maxwell.
+    See <a href="./#browser">the list of supported browsers</a>.</p>
+</canvas>
+
+<div id="about">
+    <span style="text-align : center;">Analog Circuit Desing Support Tool for Learning</span>
+</div>
+
+<div><p><span id="statusmsg"></span></p></div>
+
+</body>
+</html>
